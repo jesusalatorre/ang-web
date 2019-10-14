@@ -5,6 +5,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { RouterModule, Routes } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatTableModule} from '@angular/material/table'; 
 
 import { AppComponent } from './app.component';
 import { TalleresComponent } from './main/talleres/talleres.component';
@@ -54,6 +55,7 @@ const routes: Routes = [
     MatCardModule,
     MatDialogModule,
     MatSidenavModule,
+    MatTableModule,
     RouterModule.forRoot(routes)
   ],
   entryComponents:[ModComponent],

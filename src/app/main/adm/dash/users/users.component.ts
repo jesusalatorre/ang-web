@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
 
   constructor() { }
+  users=[]
+  displayedColumns = ["usuario", "tipo", "horas","asig","borr"];
+
 
   ngOnInit() {
+    this.users=[
+      {
+        username:"bob",
+        type:"admin",
+        horas:"100",
+      }
+    ]
   }
 
 }
