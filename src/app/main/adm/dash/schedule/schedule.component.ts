@@ -11,11 +11,11 @@ export class ScheduleComponent implements OnInit,AfterViewInit {
   constructor(
     private renderer: Renderer2,
     ) { }
-    @ViewChild('xxx') tab
+    //@ViewChild('xxx') tab
   ngOnInit() {
   }
   ngAfterViewInit(){
-    console.log("hola",this.tab);
+    //console.log("hola",this.tab);
   }
   onSave(event){    
     console.log("Save button is clicked!", event);    
