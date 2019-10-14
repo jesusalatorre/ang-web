@@ -1,0 +1,38 @@
+<div class="four columns">Deportes
+    <div *ngFor="let taller of talleresD">
+        <mat-card class="example-card" (click)="loadMod(taller)">
+        <mat-card-header>
+            <mat-card-title>{{taller.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{taller.image}}>
+        
+        </mat-card>
+        <br>
+    </div>
+              
+              
+</div>
+<div class="four columns">Idiomas
+    <div *ngFor="let taller of talleresI">
+        <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{taller.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{taller.image}}>
+        
+        </mat-card>
+        <br>
+    </div>
+</div>
+<div class="four columns">Arte y Cultura
+    <div *ngFor="let taller of talleresA">
+        <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>{{taller.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{taller.image}}>
+        
+        </mat-card>
+        <br>
+    </div>
+</div>

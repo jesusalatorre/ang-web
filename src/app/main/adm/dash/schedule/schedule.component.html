@@ -1,0 +1,28 @@
+<body>
+    <div class="ten columns">
+        <table #xxx class="u-full-width">
+            <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+                <th>Sabado</th>
+            </tr>
+            </thead>
+            <tbody  *ngFor="let h of hrs">
+                <tr>
+                    <th>{{h}}</th>      
+                    <th *ngFor="let d of disp" id="{{h}}{{d}}" (click)="onSave($event)" class="ocupado">{{d}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="two columns">
+        usuarios
+
+    </div>
+
+    </body>
