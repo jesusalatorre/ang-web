@@ -1,34 +1,33 @@
-
 <body>
-        <div class="container">
-          <div class="row">
-            <div class="ten columns"><span><strong> Proyecto 99 </strong><img src="{{ logoSrc }}"></span></div>
-            <div class="two columns"><button routerLink="/login" routerLinkActive="active">Login</button></div>
-          </div>
-      
-          <div class="row">
-            <div class="twelve columns">
-                <img src="{{ coverSrc }}" style="max-height: 100%;max-width: 100%;">
-            </div>
-          </div>
-      
-          <div class="row">
-              <mat-tab-group>
-                  <mat-tab label="HI">
-                   <app-home></app-home>
-                  </mat-tab>
-                  <mat-tab label="Two">
-                   <app-talleres></app-talleres>
-                  </mat-tab>
-                  <mat-tab label="contacto">
-                    <app-contacto></app-contacto>
-                  </mat-tab>
-                </mat-tab-group>
-           <!--<div class= "three columns" *ngFor="let item of nav_menu_items"><h6>{{item}}</h6></div>-->
-          </div>
-      
-        </div>
-      
-      
-      </body>
+  <div class="container">
+    <div class="row">
+      <div class="ten columns"><span><strong> Proyecto 99 </strong><img src="{{ logoSrc }}"></span></div>
+      <div class="two columns"><button routerLink="/login" routerLinkActive="active">Login</button></div>
+    </div>
+
+    <div class="row">
+      <div class="twelve columns">
+          <img src="{{ coverSrc }}" style="max-height: 100%;max-width: 100%;">
+      </div>
+    </div>
+
+    <div class="row">
+        <mat-tab-group>
+            <mat-tab label="HI">
+              <app-home></app-home>
+            </mat-tab>
+            <mat-tab label="Two">
+              <app-talleres></app-talleres>
+            </mat-tab>
+            <mat-tab label="contacto">
+              <app-contacto></app-contacto>
+            </mat-tab>
+          </mat-tab-group>
+      <!--<div class= "three columns" *ngFor="let item of nav_menu_items"><h6>{{item}}</h6></div>-->
+    </div>
+
+  </div>
+
+
+</body>
       

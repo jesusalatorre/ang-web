@@ -18,6 +18,11 @@ import { MainComponent } from './main/main.component';
 import { DashComponent } from './main/adm/dash/dash.component';
 import { ScheduleComponent } from './main/adm/dash/schedule/schedule.component';
 import { UsersComponent } from './main/adm/dash/users/users.component';
+import { ContentComponent } from './main/adm/dash/content/content.component';
+import { CHomwComponent } from './main/adm/dash/content/c-homw/c-homw.component';
+import { CtalleresComponent } from './main/adm/dash/content/ctalleres/ctalleres.component';
+import { CContactoComponent } from './main/adm/dash/content/c-contacto/c-contacto.component';
+import { ContentTallerModComponent } from './main/adm/dash/content/ctalleres/content-taller-mod/content-taller-mod.component';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
@@ -26,6 +31,7 @@ const routes: Routes = [
     children:[
     { path: 'schedule', component: ScheduleComponent },
     { path: 'users', component: UsersComponent },
+    { path: 'content', component: ContentComponent },
     { path: '',redirectTo:'schedule', pathMatch:'full'}
 ]
 },
@@ -46,6 +52,11 @@ const routes: Routes = [
     DashComponent,
     ScheduleComponent,
     UsersComponent,
+    ContentComponent,
+    CHomwComponent,
+    CtalleresComponent,
+    CContactoComponent,
+    ContentTallerModComponent,
     
   ],
   imports: [
@@ -58,7 +69,7 @@ const routes: Routes = [
     MatTableModule,
     RouterModule.forRoot(routes)
   ],
-  entryComponents:[ModComponent],
+  entryComponents:[ModComponent,ContentTallerModComponent],
   providers: [],
   bootstrap: [AppComponent],
   exports: [RouterModule]

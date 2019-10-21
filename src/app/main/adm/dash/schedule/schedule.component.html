@@ -15,7 +15,7 @@
             <tbody  *ngFor="let h of hrs">
                 <tr>
                     <th>{{h}}</th>      
-                    <th *ngFor="let d of disp" id="{{h}}{{d}}" (click)="onSave($event)" class="ocupado">{{d}}</th>
+                    <th *ngFor="let d of disp;let i = index;" id="{{days[i]}}{{d}}" (click)="onSave($event)" class="ocupado"> <input hidden name="{{days[i]}}{{d}}" value="{{d}}">{{d}}</th>
                 </tr>
             </tbody>
         </table>

@@ -20,6 +20,10 @@ export class DashComponent implements OnInit {
       {
         name:"usuarios",
         url:"users"
+      },
+      {
+        name:"content",
+        url:"content"
       }
     ];
 
