@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   title: string;
- 
+
   nav_menu_items: string[];
   videoUrl = "https://www.youtube.com/embed/2YBtspm8j8M";
   logoSrc: string;
@@ -30,5 +30,5 @@ export class MainComponent implements OnInit {
     this.coverSrc = "https://via.placeholder.com/1200x400?text=Proyecto+99+Cover+Photo";
   }
 
-  
+
 }
