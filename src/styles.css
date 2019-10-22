@@ -48,6 +48,23 @@ Estilos de Proyecto99
   margin: 10px;
   text-align: left;
 }
+
+.mod-purple99 {
+  color: #c475c9;
+  font-weight: 400;
+}
+
+.mod-decorator {
+  text-decoration: underline;
+}
+
+.mat-card {
+  background-color: #2931a9;
+}
+
+.mat-dialog-content {
+  background-color: #2931a9;
+}
 /*-----------------------------------------------*/
 
 

@@ -1,9 +1,15 @@
-<h1 mat-dialog-title>{{data.title}}</h1>
+
 <div mat-dialog-content>
+  <h3>{{data.title}}</h3>
   <p>{{data.desc}}</p>
- <div *ngFor="let h of data.horario"><p>{{h.dia}}</p> <p>{{h.hora}}</p></div>
- <p>Voluntarios</p>
- <div *ngFor="let v of data.voluntarios"><p>{{v}}</p> </div>
+  <div *ngFor="let h of data.horario">
+    <p class="mod-decorator">{{h.dia}}</p>
+    <p>{{h.hora}}</p>
+  </div>
+ <p class="mod-decorator">Voluntarios</p>
+ <div *ngFor="let voluntario of data.voluntarios">
+   <p>{{voluntario}}</p>
+ </div>
 </div>
 <!--<div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
