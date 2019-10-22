@@ -1,18 +1,20 @@
 
-<div class="col" align-self-center size-md="6" size-lg="5" size-xs="12">
-<div text-center>
-    <h1 id="title">Login Proyecto 99</h1>
-</div>
-<div padding>
-
-    <input name="email" type="email" placeholder="Usuario" ngModel required>
-
-    <input name="password" type="password" placeholder="Clave" ngModel required>
-
-</div>
-<div padding>
-    <button type="submit" (click)="login()">
-        Entrar 
+<div class="col" align-self-center size-md="6" size-lg="5" size-xs="12" class="login-form">
+  <div class="login-contents">
+    <h1 id="title" class="white-text">Login Proyecto 99</h1>
+    <input name="email"
+           type="email"
+           placeholder="Usuario"
+           ngModel required>
+    <br>
+    <input name="password"
+           type="password"
+           placeholder="Contraseña"
+           ngModel required>
+    <br>
+    <button type="submit" (click)="login()" class="white-text">
+      Entrar
     </button>
-</div>
+  </div>
+
 </div>
