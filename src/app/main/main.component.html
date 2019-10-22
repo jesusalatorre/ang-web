@@ -1,8 +1,8 @@
-<body>
+<body class="bg-blue99">
   <div class="container">
     <div class="row">
-      <div class="ten columns"><span><strong> Proyecto 99 </strong><img src="{{ logoSrc }}"></span></div>
-      <div class="two columns"><button routerLink="/login" routerLinkActive="active">Login</button></div>
+      <div class="ten columns login-margin"><span><strong class="white-text"> Proyecto 99 </strong><img src="{{ logoSrc }}"></span></div>
+      <div class="two columns login-margin"><button routerLink="/login" routerLinkActive="active" class="white-text">Login</button></div>
     </div>
 
     <div class="row">
@@ -12,14 +12,14 @@
     </div>
 
     <div class="row">
-        <mat-tab-group>
-            <mat-tab label="HI">
+        <mat-tab-group class="white-text">
+            <mat-tab label="Principal">
               <app-home></app-home>
             </mat-tab>
-            <mat-tab label="Two">
+            <mat-tab label="Talleres">
               <app-talleres></app-talleres>
             </mat-tab>
-            <mat-tab label="contacto">
+            <mat-tab label="Preguntas Frecuentes">
               <app-contacto></app-contacto>
             </mat-tab>
           </mat-tab-group>
@@ -30,4 +30,3 @@
 
 
 </body>
-      
