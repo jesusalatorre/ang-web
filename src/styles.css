@@ -39,8 +39,14 @@ Estilos de Proyecto99
   margin-top: 7px;
 }
 
-.white-text{
+.white-text {
   color: white;
+}
+
+.categoria-taller {
+  font-weight:400;
+  margin: 10px;
+  text-align: left;
 }
 /*-----------------------------------------------*/
 
