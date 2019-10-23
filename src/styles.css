@@ -58,12 +58,21 @@ Estilos de Proyecto99
   text-decoration: underline;
 }
 
+@keyframes mat-card-swap{
+  from{background-color:#2931a9;}
+  to{background-color: #d06246;}
+
+}
+
 .mat-card {
   background-color: #2931a9;
 }
 
-.mat-dialog-content {
-  background-color: #2931a9;
+.mat-card:hover {
+  animation-name: mat-card-swap;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 
 .login-form {
