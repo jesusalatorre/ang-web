@@ -82,7 +82,10 @@ export class TalleresComponent implements OnInit {
   loadMod(info): void {
     const dialogRef = this.dialog.open(ModComponent, {
       width: '750px',
-      data: {title: info.title, desc: info.desc, horario: info.horario, voluntarios:info.voluntario}
+      data: {title: info.title,
+            desc: info.desc,
+            horario: info.horario,
+            voluntarios:info.voluntario}
     });
   };
 }
