@@ -27,8 +27,7 @@ export class DashComponent implements OnInit {
       }
     ];
 
-    this.list.push({"hrs":this.hrs})
-    console.log(this.hrs)
+
   }
 
 

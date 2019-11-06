@@ -32,7 +32,7 @@ Estilos de Proyecto99
 
 /*-----------------------------------------------*/
 .bg-blue99 {
-  background-color: #3d46c9;
+  background-color: #003399;
 }
 
 .login-margin {
@@ -86,6 +86,20 @@ Estilos de Proyecto99
   border-style: solid;
   border-color: #2931a9;
   border-radius: 20px;
+}
+
+.mat-sidenav-container{
+  background-color: #003399;
+  height: 100%;
+}
+
+.mat-sidenav{
+  background-color: #003399;
+}
+
+.sidenav-buttons{
+  color: white;
+  margin:10px;
 }
 /*-----------------------------------------------*/
 
