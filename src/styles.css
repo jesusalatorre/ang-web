@@ -101,6 +101,19 @@ Estilos de Proyecto99
   color: white;
   margin:10px;
 }
+
+.sidenav-icons{
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.sidenav-buttons:hover {
+  color:white;
+}
+
+.sidenav-buttons:focus {
+  color:#3366ff;
+}
 /*-----------------------------------------------*/
 
 

@@ -4,7 +4,7 @@
         <div *ngFor="let l of list">
             <a mat-list-item [routerLink]="[l.url]" routerLinkActive="active">
                 <br>
-                <span><button class="sidenav-buttons">{{l.name}}</button></span>
+                <span><button class="sidenav-buttons"><img class="sidenav-icons" src="{{l.img_src}}">{{l.name}}</button></span>
             </a>
         </div>
     </mat-sidenav>
