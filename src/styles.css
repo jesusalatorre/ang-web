@@ -94,7 +94,7 @@ Estilos de Proyecto99
 }
 
 .mat-sidenav{
-  background-color: #003399;
+  background-color: #002b80;
 }
 
 .sidenav-buttons{
@@ -113,6 +113,10 @@ Estilos de Proyecto99
 
 .sidenav-buttons:focus {
   color:#3366ff;
+}
+
+.schedule-heads {
+  text-align: center;
 }
 /*-----------------------------------------------*/
 
