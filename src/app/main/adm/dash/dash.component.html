@@ -3,12 +3,11 @@
     <mat-sidenav opened mode="side">
         <div *ngFor="let l of list">
             <a mat-list-item [routerLink]="[l.url]" routerLinkActive="active">
-                <span><h1>{{l.name}}</h1> </span>
+                <br>
+                <span><button class="sidenav-buttons"><img class="sidenav-icons" src="{{l.img_src}}">{{l.name}}</button></span>
             </a>
         </div>
     </mat-sidenav>
-    
-    <router-outlet ></router-outlet>
-
+    <router-outlet></router-outlet>
     </mat-sidenav-container>
 </body>

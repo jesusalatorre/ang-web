@@ -15,20 +15,21 @@ export class DashComponent implements OnInit {
     this.list=[
       {
         name:"horario",
-        url:"schedule"
+        url:"schedule",
+        img_src:"/assets/baseline_date_range_white_18dp.png"
       },
       {
         name:"usuarios",
-        url:"users"
+        url:"users",
+        img_src:"/assets/baseline_assignment_ind_white_18dp.png"
       },
       {
         name:"content",
-        url:"content"
+        url:"content",
+        img_src:"/assets/baseline_create_white_18dp.png"
       }
     ];
 
-    this.list.push({"hrs":this.hrs})
-    console.log(this.hrs)
   }
 
 

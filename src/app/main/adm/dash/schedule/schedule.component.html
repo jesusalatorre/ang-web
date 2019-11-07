@@ -1,27 +1,26 @@
 <body>
     <div class="ten columns">
         <table #xxx class="u-full-width">
-            <thead>
-            <tr>
-                <th>Hora</th>
-                <th>Lunes</th>
-                <th>Martes</th>
-                <th>Miercoles</th>
-                <th>Jueves</th>
-                <th>Viernes</th>
-                <th>Sabado</th>
+            <thead class="white-text">
+            <tr class="schedule-heads">
+                <th class="schedule-heads">Hora</th>
+                <th class="schedule-heads">Lunes</th>
+                <th class="schedule-heads">Martes</th>
+                <th class="schedule-heads">Miercoles</th>
+                <th class="schedule-heads">Jueves</th>
+                <th class="schedule-heads">Viernes</th>
+                <th class="schedule-heads">Sabado</th>
             </tr>
             </thead>
             <tbody  *ngFor="let h of hrs">
                 <tr>
-                    <th>{{h}}</th>      
+                    <th class="white-text schedule-heads">{{h}}</th>
                     <th *ngFor="let d of disp;let i = index;" id="{{days[i]}}{{d}}" (click)="onSave($event)" class="ocupado"> <input hidden name="{{days[i]}}{{d}}" value="{{d}}">{{d}}</th>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="two columns">
-        usuarios
 
     </div>
 

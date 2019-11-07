@@ -1,7 +1,9 @@
 .ocupado{
-    background-color: red;
+    background-color: #4d0000;
+    color: black;
 }
 
 .desocupado{
     background-color: green;
+    color: white;
 }
