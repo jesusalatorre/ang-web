@@ -32,7 +32,7 @@ Estilos de Proyecto99
 
 /*-----------------------------------------------*/
 .bg-blue99 {
-  background-color: #3d46c9;
+  background-color: #003399;
 }
 
 .login-margin {
@@ -87,6 +87,86 @@ Estilos de Proyecto99
   border-color: #2931a9;
   border-radius: 20px;
 }
+
+.mat-sidenav-container{
+  background-color: #003399;
+  height: 100%;
+}
+
+.mat-sidenav{
+  background-color: #002b80;
+}
+
+.sidenav-buttons{
+  color: white;
+  margin:10px;
+}
+
+.talleres-buttons {
+  color: white;
+  margin:10px;
+}
+
+.sidenav-icons{
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.sidenav-buttons:hover {
+  color:white;
+}
+
+.talleres-buttons:hover {
+  color:white;
+}
+
+.sidenav-buttons:focus {
+  color:#3366ff;
+}
+
+.talleres-buttons:focus {
+  color:#3366ff;
+}
+
+.schedule-heads {
+  text-align: center;
+}
+
+.mat-elevation-z8{
+  background-color: #002b80;
+}
+
+.add-usr-btn{
+  color:white;
+  margin-top: 10px;
+}
+
+.add-usr-btn:hover {
+  color:white;
+}
+
+.hour-input{
+  text-align: left;
+  max-width: 50px;
+  margin-top: auto;
+}
+
+.del-btn{
+  color: white;
+  background-color: #990000;
+  margin: auto;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
+
+.talleres-container {
+  text-align: center;
+  margin-top: auto;
+}
+
+
 /*-----------------------------------------------*/
 
 

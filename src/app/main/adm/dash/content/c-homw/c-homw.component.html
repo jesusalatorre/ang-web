@@ -1,26 +1,52 @@
-<div class="row">
-  <div class="six columns">
-    <div class="row"><h1>Noticia 1</h1></div>
-    <!--<div class="row"><h5>Titulo</h5></div>
-    <div class="row"><input size="35" value="{{titulo1}}"></div>-->
-    <div class="row"><h5>Descripcion de Noticia</h5></div>
-    <div class="row">
-      <textarea class="u-full-width" style="height: 100px;" [(ngModel)]="desc1"></textarea>
+<div class="container">
+  <div class="row">
+    <div class="six columns">
+      <div class="row">
+        <h1>Noticia 1</h1>
+      </div>
+      <div class="row">
+        <h5>Titulo</h5>
+      </div>
+      <div class="row">
+        <input size="35">
+      </div>
+      <div class="row">
+        <h5>Descripcion de Noticia</h5>
+      </div>
+      <div class="row">
+        <textarea class="u-full-width" [(ngModel)]="desc1"></textarea>
+      </div>
+      <div class="row">
+        <h5>URL de imagen</h5>
+      </div>
+      <div class="row">
+        <input size="50" [(ngModel)]="img1">
+      </div>
+      <button (click)="act(1)">Actualizar</button>
     </div>
-    <div class="row"><h5>URL de imagen</h5></div>
-    <div class="row"><input size="50" [(ngModel)]="img1"></div>
-    <button (click)="act(1)">Actualizar</button>
-  </div>
-  <div class="six columns">
-    <div class="row"><h1>Noticia 2</h1></div>
-    <!--<div class="row"><h5>Titulo</h5></div>
-    <div class="row"><input size="35"></div>-->
-    <div class="row"><h5>Descripcion de Noticia</h5></div>
-    <div class="row">
-      <textarea class="u-full-width" style="height: 100px;"[(ngModel)]="desc2"></textarea>
-    </div>
-    <div class="row"><h5>URL de imagen</h5></div>
-    <div class="row"><input size="50" [(ngModel)]="img2"></div>
+    <div class="six columns">
+      <div class="row">
+        <h1>Noticia 2</h1>
+      </div>
+      <div class="row">
+        <h5>Titulo</h5>
+      </div>
+      <div class="row">
+        <input size="35">
+      </div>
+      <div class="row">
+        <h5>Descripcion de Noticia</h5>
+      </div>
+      <div class="row">
+        <textarea class="u-full-width" [(ngModel)]="desc2"></textarea>
+      </div>
+      <div class="row">
+        <h5>URL de imagen</h5>
+      </div>
+      <div class="row">
+        <input size="50" [(ngModel)]="img2">
+      </div>
     <button (click)="act(2)">Actualizar</button>
+  </div>
   </div>
 </div>
