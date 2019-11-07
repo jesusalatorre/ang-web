@@ -1,16 +1,18 @@
-<div class="row">
-    <h1>Talleres</h1>
-    <button (click)="loadMod()">agregar clase</button>
-    <div class="row">
-        <h2>Deportes</h2>
-        <button *ngFor="let t of talleresD" (click)="loadMod(t)">{{t.title}}</button>
-    </div>
-    <div class="row">
-        <h2>Arte</h2>
-        <button *ngFor="let t of talleresA">{{t.title}}</button>
-    </div>
-    <div class="row">
-        <h2>Idiomas</h2>
-        <button *ngFor="let t of talleresI">{{t.title}}</button>
-    </div>    
+<div class="container talleres-container">
+  <div class="row">
+      <h1>Talleres</h1>
+      <button (click)="loadMod()" class="talleres-buttons">agregar clase</button>
+      <div class="row">
+          <h2>Deportes</h2>
+          <button *ngFor="let t of talleresD" (click)="loadMod(t)" class="talleres-buttons">{{t.title}}</button>
+      </div>
+      <div class="row">
+          <h2>Arte</h2>
+          <button *ngFor="let t of talleresA" class="talleres-buttons">{{t.title}}</button>
+      </div>
+      <div class="row">
+          <h2>Idiomas</h2>
+          <button *ngFor="let t of talleresI" class="talleres-buttons">{{t.title}}</button>
+      </div>
+  </div>
 </div>

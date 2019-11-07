@@ -102,6 +102,11 @@ Estilos de Proyecto99
   margin:10px;
 }
 
+.talleres-buttons {
+  color: white;
+  margin:10px;
+}
+
 .sidenav-icons{
   vertical-align: middle;
   padding-right: 10px;
@@ -111,7 +116,15 @@ Estilos de Proyecto99
   color:white;
 }
 
+.talleres-buttons:hover {
+  color:white;
+}
+
 .sidenav-buttons:focus {
+  color:#3366ff;
+}
+
+.talleres-buttons:focus {
   color:#3366ff;
 }
 
@@ -147,6 +160,13 @@ Estilos de Proyecto99
 .mat-header-cell {
   text-align: center;
 }
+
+.talleres-container {
+  text-align: center;
+  margin-top: auto;
+}
+
+
 /*-----------------------------------------------*/
 
 
