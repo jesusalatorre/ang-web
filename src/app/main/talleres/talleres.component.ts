@@ -1,3 +1,4 @@
+import { TalleresService } from './../../service/talleres.service';
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { ModComponent } from './mod/mod.component'
@@ -9,12 +10,13 @@ import { ModComponent } from './mod/mod.component'
   styleUrls: ['./talleres.component.css']
 })
 export class TalleresComponent implements OnInit {
-  talleresD =[];
-  talleresI =[];
-  talleresA =[];
+  talleresD;
+  talleresI;
+  talleresA;
 
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public tSerice:TalleresService
   ) { }
 
   ngOnInit() {
@@ -34,7 +36,6 @@ export class TalleresComponent implements OnInit {
             },
           ],
         voluntario:["Pedro Dias","El otro","ese otro x2"]
-
       },
       {
         title:"Futboll",
@@ -55,12 +56,23 @@ export class TalleresComponent implements OnInit {
       }
     ];
 
+    this.tSerice.getTalleres("deportivo").subscribe((reply)=>{
+      console.log("deportes",reply);
+      this.talleresD=reply;
+    })
+
     this.talleresI=[
       {
         title:"Ingles basico",
         image:"https://dev-res.thumbr.io/libraries/19/17/24/lib/1466673908951_13.jpg?size=854x493s&ext=jpg"
       }
     ];
+
+    this.tSerice.getTalleres("idioma").subscribe((reply)=>{
+      console.log("idioma",reply);
+      this.talleresI=reply;
+    })
+    
 
     this.talleresA=[
       {
@@ -72,6 +84,11 @@ export class TalleresComponent implements OnInit {
         image:"https://www.guitarraviva.com/wp-content/uploads/2015/09/stock-nylon-bossa_67587098-1400x787.jpg"
       }
     ];
+
+    this.tSerice.getTalleres("arte").subscribe((reply)=>{
+      console.log("arte",reply);
+      this.talleresA=reply;
+    })
   }
   /*
     title: string;

@@ -1,11 +1,11 @@
 
 <div class="row">
   <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="{{ facebookUrl }}"></script>
+   <!-- <script async defer crossorigin="anonymous" src="{{ facebookUrl }}"></script>-->
 </div>
 
 <div class="row">
-  <iframe width="100%" height="450" [src]= "youtubeUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <!--<iframe width="100%" height="450" [src]= "youtubeUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
 </div>
 
 <div class="row">
@@ -15,14 +15,17 @@
 
 <div class="row">
   <div class="six columns">
-    <span class = "six columns" *ngFor="let update of updates">
-      <img src="{{ update.img }}" style="max-height: 200px;max-width: 300px;">
-      <p> {{ update.story }} </p>
+    <span class = "six columns">
+      <img src="{{ updates1.img }}" style="max-height: 200px;max-width: 300px;">
+      <p> {{ updates1.story }} </p>
     </span>
+    <span class = "six columns">
+        <img src="{{ updates2.img }}" style="max-height: 200px;max-width: 300px;">
+        <p> {{ updates2.story }} </p>
+      </span>
   </div>
-
   <div class="six columns">
-    <iframe [src]="facebookUrl"
+    <!--<iframe [src]="facebookUrl"
             width="100%"
             height="390"
             style="border:none;overflow:hidden;"
@@ -30,6 +33,6 @@
             frameborder="0"
             allowTransparency="true"
             allow="encrypted-media">
-    </iframe>
+    </iframe>-->
   </div>
 </div>

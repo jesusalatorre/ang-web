@@ -6,6 +6,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule, Routes } from '@angular/router';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import {MatTableModule} from '@angular/material/table'; 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TalleresComponent } from './main/talleres/talleres.component';
@@ -67,6 +69,8 @@ const routes: Routes = [
     MatDialogModule,
     MatSidenavModule,
     MatTableModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(routes)
   ],
   entryComponents:[ModComponent,ContentTallerModComponent],

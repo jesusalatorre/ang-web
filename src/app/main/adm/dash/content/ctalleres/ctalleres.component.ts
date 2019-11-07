@@ -1,3 +1,4 @@
+import { TalleresService } from './../../../../../service/talleres.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContentTallerModComponent } from './content-taller-mod/content-taller-mod.component';
@@ -9,12 +10,13 @@ import { ContentTallerModComponent } from './content-taller-mod/content-taller-m
 })
 export class CtalleresComponent implements OnInit {
 
-  talleresD =[];
-  talleresI =[];
-  talleresA =[];
+  talleresD;
+  talleresI;
+  talleresA;
 
   constructor(
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    public tService: TalleresService
   ) { }
 
   ngOnInit() {
@@ -55,12 +57,22 @@ export class CtalleresComponent implements OnInit {
       }
     ];
 
+    this.tService.getTalleres("deportivo").subscribe((reply)=>{
+      console.log("deportivos:",reply);
+      this.talleresD=reply;
+    })
+
     this.talleresI=[
       {
         title:"Ingles basico",
         image:"https://dev-res.thumbr.io/libraries/19/17/24/lib/1466673908951_13.jpg?size=854x493s&ext=jpg"
       }
     ];
+
+    this.tService.getTalleres("idioma").subscribe((reply)=>{
+      console.log("idioma:",reply);
+      this.talleresI=reply;
+    })
 
     this.talleresA=[
       {
@@ -72,6 +84,11 @@ export class CtalleresComponent implements OnInit {
         image:"https://www.guitarraviva.com/wp-content/uploads/2015/09/stock-nylon-bossa_67587098-1400x787.jpg"
       }
     ];
+
+    this.tService.getTalleres("arte").subscribe((reply)=>{
+      console.log("arte:",reply);
+      this.talleresA=reply;
+    })
   }
   /*
     title: string;
@@ -86,12 +103,47 @@ export class CtalleresComponent implements OnInit {
         width: '750px',
         data: {title: info.title, desc: info.desc, horario: info.horario, voluntarios:info.voluntario,id:info._id}
       });
+      //after closes updates te list (to see if it is errased)
+      dialogRef.afterClosed().subscribe((reply)=>{
+        this.tService.getTalleres("deportivo").subscribe((reply)=>{
+          console.log("deportivos:",reply);
+          this.talleresD=reply;
+        })
+
+        this.tService.getTalleres("idioma").subscribe((reply)=>{
+          console.log("idioma:",reply);
+          this.talleresI=reply;
+        })
+
+        this.tService.getTalleres("arte").subscribe((reply)=>{
+          console.log("arte:",reply);
+          this.talleresA=reply;
+        })
+      })
     }
     else
     {
       const dialogRef = this.dialog.open(ContentTallerModComponent, {
         width: '750px',
+        data:{title: "", desc: "", horario:  "", voluntarios: ""}
       });
+      //after closes updates te list (to see if it is created)
+      dialogRef.afterClosed().subscribe((reply)=>{
+        this.tService.getTalleres("deportivo").subscribe((reply)=>{
+          console.log("deportivos:",reply);
+          this.talleresD=reply;
+        })
+
+        this.tService.getTalleres("idioma").subscribe((reply)=>{
+          console.log("idioma:",reply);
+          this.talleresI=reply;
+        })
+
+        this.tService.getTalleres("arte").subscribe((reply)=>{
+          console.log("arte:",reply);
+          this.talleresA=reply;
+        })
+      })
     }
     
   };

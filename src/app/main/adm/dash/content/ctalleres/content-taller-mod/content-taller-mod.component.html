@@ -1,32 +1,36 @@
-<h1 mat-dialog-title>Titulo</h1>
-<input value="{{data.title}}" size="50">
+
 <div mat-dialog-content>
-  <h2 mat-dialog-title>Descripcion</h2>
-  <textarea class="u-full-width">{{data.desc}}</textarea>
-  <h2 mat-dialog-title>Horario</h2>
-  <div class="row">
-    <div class="six columns">
-      <table>
-        <tr>
-          <th>Dia</th>
-          <th>Hora</th>
-        </tr>
-        <tr *ngFor="let d of days;">
-          <th>{{d}}</th>
-          <th><select>
-            <option *ngFor="let h of hrs" value="{{h}}">{{h}}</option>
-          </select></th>
-        </tr>
-      </table>
+    <h1 mat-dialog-title>Titulo</h1>
+    <input value="{{data.title}}" [disabled]="data.title!=''" size="50">
+    <h2 mat-dialog-title>Descripcion</h2>
+    <textarea class="u-full-width" [(ngModel)]="data.desc"></textarea>
+    <h2 mat-dialog-title>Horario</h2>
+    <div class="row">
+      <div class="six columns">
+        <table>
+          <tr>
+            <th>Dia</th>
+            <th>Hora</th>
+          </tr>
+          <tr *ngFor="let d of days;let i= index">
+            <th>{{d}}</th>
+            <th><select id="{{d}}" ngModel>
+              <option *ngFor="let h of hrs" value="{{h}}">{{h}}</option>
+            </select></th>
+          </tr>
+        </table>
+      </div>
+      <!--<div *ngFor="let h of data.horario"><p>{{h.dia}}</p> <p>{{h.hora}}</p></div>-->
+      <h2 mat-dialog-title>Voluntarios</h2>
+      <div class="six columns">
+        <div class="row"><input [(ngModel)]="data.voluntarios[0]"></div>
+        <div class="row"><input [(ngModel)]="data.voluntarios[1]"></div>
+        <div class="row"><input [(ngModel)]="data.voluntarios[2]"></div>
+      </div>
     </div>
-    <!--<div *ngFor="let h of data.horario"><p>{{h.dia}}</p> <p>{{h.hora}}</p></div>-->
-    <h2 mat-dialog-title>Voluntarios</h2>
-    <div class="six columns">
-      <div class="row"><input placeholder="Nombre"></div>
-      <div class="row"><input placeholder="Nombre"></div>
-      <div class="row"><input placeholder="Nombre"></div>
-    </div>
-  </div>
+    <button>Guardar</button> <button (click)="delete()">Borrar</button>
+    <form #f="ngForm" (ngSubmit)="onSub(f)" novalidate>
+  </form>
   <!--<div *ngFor="let v of data.voluntarios"><p>{{v}}</p> </div>-->
 </div>
 <!--<div mat-dialog-actions>

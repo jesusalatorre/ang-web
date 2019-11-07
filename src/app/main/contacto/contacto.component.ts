@@ -1,3 +1,4 @@
+import { FaqService } from './../../service/faq.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
   questions;
-  constructor() { }
+  constructor(
+    public fService: FaqService
+  ) { }
 
   ngOnInit() {
     this.questions=[
@@ -16,7 +19,7 @@ export class ContactoComponent implements OnInit {
         answer:"nose"
       },
       {
-        question:"otra pregunta",
+        question:"otra pr egunta",
         answer:"otro nose"
         
       },
@@ -25,6 +28,10 @@ export class ContactoComponent implements OnInit {
         answer:"otro nose por dos"
       },
     ]
+
+    this.fService.getFaq().subscribe((reply)=>{
+      this.questions=reply;
+    })
   }
 
 }

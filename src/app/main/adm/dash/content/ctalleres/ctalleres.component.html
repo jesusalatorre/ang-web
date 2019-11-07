@@ -7,10 +7,10 @@
     </div>
     <div class="row">
         <h2>Arte</h2>
-        <button *ngFor="let t of talleresA">{{t.title}}</button>
+        <button *ngFor="let t of talleresA" (click)="loadMod(t)">{{t.title}}</button>
     </div>
     <div class="row">
         <h2>Idiomas</h2>
-        <button *ngFor="let t of talleresI">{{t.title}}</button>
+        <button *ngFor="let t of talleresI" (click)="loadMod(t)">{{t.title}}</button>
     </div>    
 </div>
