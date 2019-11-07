@@ -118,6 +118,35 @@ Estilos de Proyecto99
 .schedule-heads {
   text-align: center;
 }
+
+.mat-elevation-z8{
+  background-color: #002b80;
+}
+
+.add-usr-btn{
+  color:white;
+  margin-top: 10px;
+}
+
+.add-usr-btn:hover {
+  color:white;
+}
+
+.hour-input{
+  text-align: left;
+  max-width: 50px;
+  margin-top: auto;
+}
+
+.del-btn{
+  color: white;
+  background-color: #990000;
+  margin: auto;
+}
+
+.mat-header-cell {
+  text-align: center;
+}
 /*-----------------------------------------------*/
 
 

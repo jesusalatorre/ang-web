@@ -1,33 +1,40 @@
-<button (click)="newUsr()">Crear nuevo usuario</button>
-<div style="padding: 30px;" class="8 columns">
-  <mat-table class="mat-elevation-z8" #table [dataSource]="users">
-    <ng-container matColumnDef="usuario">
-      <mat-header-cell *matHeaderCellDef>usuario</mat-header-cell>
-      <mat-cell *matCellDef="let users">{{ users.username }}</mat-cell>
-    </ng-container>
+<div class="container">
+  <div class="row">
+    <div class="nine columns"><br></div>
+    <div class="two columns"><button (click)="newUsr()" class="add-usr-btn">Crear nuevo usuario</button></div>
+  </div>
+  <div class="row">
+  <div class="twelve columns">
+    <mat-table class="mat-elevation-z8" #table [dataSource]="users">
+      <ng-container matColumnDef="usuario">
+        <mat-header-cell *matHeaderCellDef>Usuario</mat-header-cell>
+        <mat-cell *matCellDef="let users">{{ users.username }}</mat-cell>
+      </ng-container>
 
-    <ng-container matColumnDef="tipo">
-      <mat-header-cell *matHeaderCellDef>tipo</mat-header-cell>
-      <mat-cell *matCellDef="let users">{{ users.type }}</mat-cell>
-    </ng-container>
+      <ng-container matColumnDef="tipo">
+        <mat-header-cell *matHeaderCellDef>Tipo</mat-header-cell>
+        <mat-cell *matCellDef="let users">{{ users.type }}</mat-cell>
+      </ng-container>
 
-    <ng-container matColumnDef="horas">
-      <mat-header-cell *matHeaderCellDef>Horas</mat-header-cell>
-      <mat-cell *matCellDef="let users">{{ users.horas }}</mat-cell>
-    </ng-container>
+      <ng-container matColumnDef="horas">
+        <mat-header-cell *matHeaderCellDef>Horas</mat-header-cell>
+        <mat-cell *matCellDef="let users">{{ users.horas }}</mat-cell>
+      </ng-container>
 
-    <ng-container matColumnDef="asig">
-      <mat-header-cell *matHeaderCellDef>Asignar horas</mat-header-cell>
-      <mat-cell *matCellDef="let users"><input></mat-cell>
-    </ng-container>
+      <ng-container matColumnDef="asig">
+        <mat-header-cell *matHeaderCellDef>Asignar horas</mat-header-cell>
+        <mat-cell *matCellDef="let users"><input class="hour-input"></mat-cell>
+      </ng-container>
 
-    <ng-container matColumnDef="borr">
-      <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
-      <mat-cell *matCellDef="let users"><button>Borrar</button></mat-cell>
-    </ng-container>
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <ng-container matColumnDef="borr">
+        <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
+        <mat-cell *matCellDef="let users"><button class="del-btn">Borrar</button></mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
-    <mat-row *matRowDef="let row; columns: displayedColumns" (click)="onRowClicked(row)"></mat-row>
-  </mat-table>
-  <div padding *ngIf="!users.length" class="empty-row">No hay registros</div>
+      <mat-row *matRowDef="let row; columns: displayedColumns" (click)="onRowClicked(row)"></mat-row>
+    </mat-table>
+    <div padding *ngIf="!users.length" class="empty-row">No hay registros</div>
+  </div>
+  </div>
 </div>
