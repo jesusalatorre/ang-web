@@ -1,9 +1,11 @@
 <div class="container talleres-container">
   <div class="row">
      <div class="row"><h1>Preguntas frecuentes</h1></div>
-     <div class="row" *ngFor="let q of questions">
+     <div class="row" *ngFor="let q of questions; let i = index">
+         <h5>Pregunta numero {{i+1}}</h5>
          <div class="row"><input placeholder="{{q.question}}"></div>
-         <div class="row">{{q.answer}}</div>
+         <div class="row"><input placeholder="{{q.answer}}"></div>
+         <br>
      </div>
      <div class="row">
          <button class="talleres-buttons">Agregar Pregunta</button>
