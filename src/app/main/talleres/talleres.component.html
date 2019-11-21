@@ -12,7 +12,7 @@
 
 <div class="four columns"><h5 class="categoria-taller">Idiomas</h5>
     <div *ngFor="let taller of talleresI">
-        <mat-card class="example-card">
+        <mat-card class="example-card" (click)="loadMod(taller)">
         <mat-card-header>
             <mat-card-title>{{taller.title}}</mat-card-title>
         </mat-card-header>
@@ -24,7 +24,7 @@
 
 <div class="four columns"><h5 class="categoria-taller">Arte y Cultura</h5>
     <div *ngFor="let taller of talleresA">
-        <mat-card class="example-card">
+        <mat-card class="example-card" (click)="loadMod(taller)">
         <mat-card-header>
             <mat-card-title>{{taller.title}}</mat-card-title>
         </mat-card-header>
