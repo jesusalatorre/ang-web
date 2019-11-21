@@ -1,6 +1,7 @@
 <div class="container talleres-container">
   <div class="row">
      <div class="row"><h1>Preguntas frecuentes</h1></div>
+<<<<<<< HEAD
      <div class="row" *ngFor="let q of questions">
         <div class="row">
           <input [(ngModel)]="q.question" placeholder="Pregunta Vacia"> <input [(ngModel)]="q.answer" placeholder="Respuesta Vacia"><span (click)="mod(q.question,q.answer,q._id)">      Guardar</span><span (click)="delete(q._id)">      Borrar</span></div>
@@ -8,5 +9,16 @@
         <div class="row">
             <button class="talleres-buttons" (click)="create()">Agregar Pregunta</button>
         </div>
+=======
+     <div class="row" *ngFor="let q of questions; let i = index">
+         <h5>Pregunta numero {{i+1}}</h5>
+         <div class="row"><input placeholder="{{q.question}}"></div>
+         <div class="row"><input placeholder="{{q.answer}}"></div>
+         <br>
+     </div>
+     <div class="row">
+         <button class="talleres-buttons">Agregar Pregunta</button>
+     </div>
+>>>>>>> 368aa6d0713d5f99ca11ba85e883f3184b6b491c
   </div>
 </div>
