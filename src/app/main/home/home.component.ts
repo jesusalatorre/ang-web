@@ -11,9 +11,9 @@ export class HomeComponent implements OnInit {
   updates: any[];
   updates1;
   updates2;
-  facebookTargetUrl = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId";
+  facebookTargetUrl = "https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcontacto.proyecto99&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId";
   facebookUrl: SafeResourceUrl;
-  youtubeTargetUrl = "https://www.youtube.com/embed/2YBtspm8j8M";
+  youtubeTargetUrl = "https://www.youtube.com/embed/f8pXONYEsMs";
   youtubeUrl: SafeResourceUrl;
   constructor(
     private sanitizer: DomSanitizer,

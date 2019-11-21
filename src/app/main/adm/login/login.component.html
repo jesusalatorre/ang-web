@@ -5,12 +5,14 @@
     <input name="email"
            type="email"
            placeholder="Usuario"
-           ngModel required>
+           [(ngModel)]="username"
+           required>
     <br>
     <input name="password"
            type="password"
            placeholder="Contraseña"
-           ngModel required>
+           [(ngModel)]="password"
+           required>
     <br>
     <button type="submit" (click)="login()" class="white-text">
       Entrar

@@ -82,7 +82,7 @@ const routes: Routes = [
     MatInputModule,
     RouterModule.forRoot(routes)
   ],
-  entryComponents:[ModComponent,ContentTallerModComponent,NewUserComponent],
+  entryComponents:[ModComponent,ContentTallerModComponent,NewUserComponent,AlertComponent],
   providers: [],
   bootstrap: [AppComponent],
   exports: [RouterModule]

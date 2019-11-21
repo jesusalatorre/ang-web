@@ -1,5 +1,7 @@
+import { AlertComponent } from './../../../alert/alert.component';
 import { HomeService } from './../../../../../service/home.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-c-homw',
@@ -9,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class CHomwComponent implements OnInit {
 
   constructor(
+    public dialog: MatDialog,
     public hService: HomeService
   ) { }
   //titulo1;
@@ -39,6 +42,10 @@ export class CHomwComponent implements OnInit {
       this.hService.setNews(1,this.img1,this.desc1).subscribe((reply)=>{
         //console.log(reply.insertedCount);
         let reply1: any=reply;
+        const dialogRef = this.dialog.open(AlertComponent, {
+          //width: '750px',
+          data:"Se a moficicado la noticia1 correctamente"
+        });
         if(reply1.insertedCount==1)
         {
 
@@ -51,6 +58,10 @@ export class CHomwComponent implements OnInit {
       this.hService.setNews(2,this.img2,this.desc2).subscribe((reply)=>{
         console.log(reply);
         let reply1: any=reply;
+        const dialogRef = this.dialog.open(AlertComponent, {
+          //width: '750px',
+          data:"Se a moficicado la noticia1 correctamente"
+        });
         if(reply1.insertedCount==1)
         {
 

@@ -10,12 +10,19 @@ export class UsersService {
   public createUsrs ='/users/register';
   public deleteUsrs ='/users/delete';
   public horasUsrs ='/users/horas';
+  public loginUsrs ='/login/logme';
 
 
   constructor(
     private http: HttpClient
 
   ) { }
+
+
+  login(username,password){
+    //console.log("url ",)
+    return this.http.post(this.url+this.loginUsrs,{"username":username,"password":password},{responseType: 'text'});
+  }
 
   listUsers(){
     //console.log("url ",)

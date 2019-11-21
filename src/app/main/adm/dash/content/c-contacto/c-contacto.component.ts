@@ -1,5 +1,7 @@
+import { AlertComponent } from './../../../alert/alert.component';
 import { FaqService } from './../../../../../service/faq.service';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-c-contacto',
@@ -9,8 +11,9 @@ import { Component, OnInit } from '@angular/core';
 export class CContactoComponent implements OnInit {
   questions;
   constructor(
-    public fService:FaqService
-  ) { }
+    public fService:FaqService,
+    public dialog: MatDialog
+    ) { }
 
   ngOnInit() {
     this.questions=[
@@ -42,8 +45,14 @@ export class CContactoComponent implements OnInit {
 
   mod(question,answer,id){
     this.fService.modFaq(question,answer,id).subscribe((reply)=>{
+      console.log("que regreasa",reply)
+      
       this.fService.getFaq().subscribe((reply)=>{
         this.questions=reply;
+        const dialogRef = this.dialog.open(AlertComponent, {
+          //width: '750px',
+          data:"Se a moficicado correctamente"
+        });
       })
     })
   }
