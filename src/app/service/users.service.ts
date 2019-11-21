@@ -22,8 +22,8 @@ export class UsersService {
     return this.http.post(this.url+this.listUsrs,{});
   }
 
-  createUsers(data){
-    return this.http.post(this.url+this.createUsrs,{"username":data.username,"password":data.password,"type":data.type});
+  createUsers(username,password,type){
+    return this.http.post(this.url+this.createUsrs,{"username":username,"password":password,"type":type});
   }
 
   deleteUsers(data){

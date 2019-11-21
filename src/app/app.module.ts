@@ -28,6 +28,7 @@ import { CtalleresComponent } from './main/adm/dash/content/ctalleres/ctalleres.
 import { CContactoComponent } from './main/adm/dash/content/c-contacto/c-contacto.component';
 import { ContentTallerModComponent } from './main/adm/dash/content/ctalleres/content-taller-mod/content-taller-mod.component';
 import { NewUserComponent } from './main/adm/dash/users/new-user/new-user.component';
+import { AlertComponent } from './main/adm/alert/alert.component';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
@@ -63,6 +64,7 @@ const routes: Routes = [
     CContactoComponent,
     ContentTallerModComponent,
     NewUserComponent,
+    AlertComponent,
     
   ],
   imports: [

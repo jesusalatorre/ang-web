@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     var login="true";
     if(login=="true")
     {
-      this.router.navigate(['dash']);
+      this.router.navigate(['dash/content']);
     }
     else if(login=="false")
     {

@@ -2,21 +2,31 @@
 <div mat-dialog-content>
     <h3>Nuevo usuario</h3>
     <div class="row">
-        <mat-form-field>
-            <input matInput #usuario maxlength="10" placeholder="Usuario">
+        <mat-form-field style="width: 100%;">
+            <input matInput [(ngModel)]="usuario" maxlength="10" placeholder="Usuario">
             <!--<mat-hint align="end">{{usuario.value?.length || 0}}/10</mat-hint>-->
         </mat-form-field>
     </div>
-    <mat-form-field>
-        <input matInput #clave maxlength="10"  placeholder="Clave">
-        <!--<mat-hint align="end">{{usuario.value?.length || 0}}/10</mat-hint>-->
-    </mat-form-field>
-    
-      <mat-form-field>
-        <mat-select placeholder="Tipo de usuario">
-          <mat-option value="option">admin</mat-option>
-          <mat-option value="option">voluntario</mat-option>
-        </mat-select>
-        <!--<mat-hint align="end">Here's the dropdown arrow ^</mat-hint>-->
+
+    <div class="row">
+      <mat-form-field  style="width: 100%;">
+          <input matInput [(ngModel)]="clave" maxlength="10"  placeholder="Clave">
+          <!--<mat-hint align="end">{{usuario.value?.length || 0}}/10</mat-hint>-->
       </mat-form-field>
+    </div>  
+
+    <div class="row">
+      <mat-form-field style="width: 100%;">
+        <mat-select [(ngModel)]="nivel" placeholder="Tipo de usuario">
+          <mat-option value="admin">admin</mat-option>
+          <mat-option value="voluntario">voluntario</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="row">
+        <button (click)="crear()">crear</button>
+        &nbsp;
+        <button (click)="cerrar()">cancelar</button>
+      </div>
+    </div>
   </div>

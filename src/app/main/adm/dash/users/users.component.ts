@@ -34,8 +34,14 @@ export class UsersComponent implements OnInit {
   onRowClicked(row){}
   newUsr(){
     const dialogRef = this.dialog.open(NewUserComponent, {
-      width: '750px'
+      //width: '750px'
     });
+
+    dialogRef.afterClosed().subscribe(()=>
+    this.usrService.listUsers().subscribe((reply)=>{
+      //console.log("paso 3")
+      this.users=reply;
+    }))
   }
   delete(data){
         //console.log("paso 1")
