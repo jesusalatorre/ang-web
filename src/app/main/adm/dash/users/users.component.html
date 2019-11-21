@@ -23,17 +23,17 @@
 
       <ng-container matColumnDef="asig">
         <mat-header-cell *matHeaderCellDef>Asignar horas</mat-header-cell>
-        <mat-cell *matCellDef="let users; let i = index"><input class="hour-input" [(ngModel)]="horas[i]"></mat-cell>
+        <mat-cell *matCellDef="let users; let i = index"><input class="hour-input" [(ngModel)]="horas[i]"><img class="sidenav-icons" src="assets/baseline_access_time_white_18dp.png"></mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="borr">
         <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
-        <mat-cell *matCellDef="let users"><button class="del-btn" (click)="delete(users)">Borrar</button></mat-cell>
+        <mat-cell *matCellDef="let users"><button class="del-btn" (click)="delete(users)"><img class="sidenav-icons" src="assets/baseline_delete_forever_white_18dp.png">Borrar</button></mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="asigB">
         <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let users; let i = index"><button class="asig-btn" (click)="asignar(users.username,horas[i])">Asiganar Horas</button></mat-cell>
+        <mat-cell *matCellDef="let users; let i = index"><button class="asig-btn" (click)="asignar(users.username,horas[i])"><img class="sidenav-icons" src="assets/baseline_save_white_18dp.png" style="padding:3px;">Asiganar Horas</button></mat-cell>
       </ng-container>
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

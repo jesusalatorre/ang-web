@@ -5,12 +5,12 @@
          <h5>Pregunta numero {{i+1}}</h5>
          <div class="row"><input [(ngModel)]="q.question" value="{{q.question}}"></div>
          <div class="row"><input [(ngModel)]="q.answer" value="{{q.answer}}"></div>
-         <button class="talleres-buttons" (click)="mod(q.question,q.answer,q._id)">      Guardar</button><button class="talleres-buttons" (click)="delete(q._id)">      Borrar</button>
+         <button class="talleres-buttons" (click)="mod(q.question,q.answer,q._id)"><img class="sidenav-icons" src="assets/baseline_save_white_18dp.png">      Guardar</button><button class="talleres-buttons" (click)="delete(q._id)"><img class="sidenav-icons" src="assets/baseline_delete_forever_white_18dp.png">      Borrar</button>
          <br>
-         
+
      </div>
      <div class="row">
-         <button class="talleres-buttons" (click)="create()">Agregar Pregunta</button>
+         <button class="talleres-buttons" (click)="create()"><img class="sidenav-icons" src="assets/baseline_add_white_18dp.png">Agregar Pregunta</button>
      </div>
   </div>
 </div>
