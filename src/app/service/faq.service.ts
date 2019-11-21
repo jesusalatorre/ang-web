@@ -35,7 +35,10 @@ export class FaqService {
 
 
   modFaq(question,answer,id){
-    return this.http.post(this.url+this.mdFaq,{"id":id,"question":question,"answer":answer})
+    console.log("id",id)
+    console.log("q",question)
+    console.log("a",answer)
+    return this.http.post(this.url+this.mdFaq,{"_id":id,"question":question,"answer":answer})
   }
 
 

@@ -1,3 +1,4 @@
+import { horas, voluntraios } from './../../adm/dash/content/ctalleres/content-taller-mod/content-taller-mod.component';
 import { Component, OnInit, Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
@@ -5,8 +6,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 export interface DialogData {
   title: string;
   desc: string;
-  horario: object;
-  voluntarios:object;
+  horario: horas;
+  voluntarios:voluntraios;
 }
 
 @Component({
@@ -22,6 +23,7 @@ export class ModComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.data)
   }
 
 }

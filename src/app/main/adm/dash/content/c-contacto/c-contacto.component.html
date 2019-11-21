@@ -3,8 +3,8 @@
      <div class="row"><h1>Preguntas frecuentes</h1></div>
      <div class="row" *ngFor="let q of questions; let i = index">
          <h5>Pregunta numero {{i+1}}</h5>
-         <div class="row"><input value="{{q.question}}"></div>
-         <div class="row"><input value="{{q.answer}}"></div>
+         <div class="row"><input [(ngModel)]="q.question" value="{{q.question}}"></div>
+         <div class="row"><input [(ngModel)]="q.answer" value="{{q.answer}}"></div>
          <button class="talleres-buttons" (click)="mod(q.question,q.answer,q._id)">      Guardar</button><button class="talleres-buttons" (click)="delete(q._id)">      Borrar</button>
          <br>
          

@@ -32,6 +32,7 @@ export class CContactoComponent implements OnInit {
       },
     ]
     this.fService.getFaq().subscribe((reply)=>{
+      console.log(reply)
       this.questions=reply;
     })
   }

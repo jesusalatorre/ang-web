@@ -97,8 +97,9 @@ export class TalleresComponent implements OnInit {
     voluntarios:object;
   */
   loadMod(info): void {
+    //console.log("info:",info)
     const dialogRef = this.dialog.open(ModComponent, {
-      width: '750px',
+      //width: '750px',
       data: {title: info.title,
             desc: info.desc,
             horario: info.horario,

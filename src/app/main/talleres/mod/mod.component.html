@@ -2,13 +2,35 @@
 <div mat-dialog-content>
   <h3>{{data.title}}</h3>
   <p>{{data.desc}}</p>
-  <div *ngFor="let h of data.horario">
-    <p class="mod-decorator">{{h.dia}}</p>
-    <p>{{h.hora}}</p>
+  <div *ngIf="data.horario.lunes!='este dia no hay clase'">
+    <p class="mod-decorator" >Lunes</p>
+    <p>{{data.horario.lunes}}</p>
+  </div>
+  <div *ngIf="data.horario.martes!='este dia no hay clase'">
+    <p class="mod-decorator" >Martes</p>
+    <p>{{data.horario.martes}}</p>
+  </div>
+  <div *ngIf="data.horario.miercoles!='este dia no hay clase'">
+    <p class="mod-decorator" >Miercoles</p>
+    <p>{{data.horario.miercoles}}</p>
+  </div>
+  <div *ngIf="data.horario.jueves!='este dia no hay clase'">
+    <p class="mod-decorator" >Jueves</p>
+    <p>{{data.horario.jueves}}</p>
+  </div>
+  <div *ngIf="data.horario.viernes!='este dia no hay clase'">
+    <p class="mod-decorator" >Viernes</p>
+    <p>{{data.horario.viernes}}</p>
+  </div>
+  <div *ngIf="data.horario.sabado!='este dia no hay clase'">
+    <p class="mod-decorator" >Sabado</p>
+    <p>{{data.horario.sabado}}</p>
   </div>
  <p class="mod-decorator">Voluntarios</p>
- <div *ngFor="let voluntario of data.voluntarios">
-   <p>{{voluntario}}</p>
+ <div class="row">
+   <p>{{data.voluntarios.uno}}</p>
+   <p>{{data.voluntarios.dos}}</p>
+   <p>{{data.voluntarios.tres}}</p>
  </div>
 </div>
 <!--<div mat-dialog-actions>
