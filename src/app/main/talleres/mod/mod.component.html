@@ -2,27 +2,27 @@
 <div mat-dialog-content>
   <h3>{{data.title}}</h3>
   <p>{{data.desc}}</p>
-  <div *ngIf="data.horario.lunes!='este dia no hay clase'">
+  <div *ngIf="data.horario.lunes!='este dia no hay clase'||data.horario.lunes!=''">
     <p class="mod-decorator" >Lunes</p>
     <p>{{data.horario.lunes}}</p>
   </div>
-  <div *ngIf="data.horario.martes!='este dia no hay clase'">
+  <div *ngIf="data.horario.martes!='este dia no hay clase'||data.horario.martes!=''">
     <p class="mod-decorator" >Martes</p>
     <p>{{data.horario.martes}}</p>
   </div>
-  <div *ngIf="data.horario.miercoles!='este dia no hay clase'">
+  <div *ngIf="data.horario.miercoles!='este dia no hay clase'||data.horario.miercoles!=''">
     <p class="mod-decorator" >Miercoles</p>
     <p>{{data.horario.miercoles}}</p>
   </div>
-  <div *ngIf="data.horario.jueves!='este dia no hay clase'">
+  <div *ngIf="data.horario.jueves!='este dia no hay clase'||data.horario.jueves!=''">
     <p class="mod-decorator" >Jueves</p>
     <p>{{data.horario.jueves}}</p>
   </div>
-  <div *ngIf="data.horario.viernes!='este dia no hay clase'">
+  <div *ngIf="data.horario.viernes!='este dia no hay clase'||data.horario.viernes!=''">
     <p class="mod-decorator" >Viernes</p>
     <p>{{data.horario.viernes}}</p>
   </div>
-  <div *ngIf="data.horario.sabado!='este dia no hay clase'">
+  <div *ngIf="data.horario.sabado!='este dia no hay clase'||data.horario.sabado!=''">
     <p class="mod-decorator" >Sabado</p>
     <p>{{data.horario.sabado}}</p>
   </div>
