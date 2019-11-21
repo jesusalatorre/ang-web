@@ -1,9 +1,17 @@
 
 <div mat-dialog-content>
     <h1 mat-dialog-title>Titulo</h1>
-    <input value="{{data.title}}" [disabled]="data.title!=''" size="50">
+    <input value="{{data.title}}" id="title" [disabled]="data.title!=''" size="50">
     <h2 mat-dialog-title>Descripcion</h2>
     <textarea class="u-full-width" [(ngModel)]="data.desc"></textarea>
+    <h2 mat-dialog-title>Url de imagen</h2>
+    <input [(ngModel)]="data.img" size="50">
+    <h2 mat-dialog-title>Tipo de taller</h2>
+    <select [(ngModel)]="data.type">
+      <option value="deportivo">deportivo</option>
+      <option value="arte">arte</option>
+      <option value="idioma">idioma</option>
+    </select>
     <h2 mat-dialog-title>Horario</h2>
     <div class="row">
       <div class="six columns">
@@ -14,7 +22,7 @@
           </tr>
           <tr *ngFor="let d of days;let i= index">
             <th>{{d}}</th>
-            <th><select id="{{d}}" ngModel>
+            <th><select id="{{d}}" (click)="log()">
               <option *ngFor="let h of hrs" value="{{h}}">{{h}}</option>
             </select></th>
           </tr>
@@ -23,13 +31,13 @@
       <!--<div *ngFor="let h of data.horario"><p>{{h.dia}}</p> <p>{{h.hora}}</p></div>-->
       <h2 mat-dialog-title>Voluntarios</h2>
       <div class="six columns">
-        <div class="row"><input [(ngModel)]="data.voluntarios[0]"></div>
-        <div class="row"><input [(ngModel)]="data.voluntarios[1]"></div>
-        <div class="row"><input [(ngModel)]="data.voluntarios[2]"></div>
+        <div class="row"><input [(ngModel)]="data.voluntarios.uno"></div>
+        <div class="row"><input [(ngModel)]="data.voluntarios.dos"></div>
+        <div class="row"><input [(ngModel)]="data.voluntarios.tres"></div>
       </div>
     </div>
-    <button>Guardar</button> <button (click)="delete()">Borrar</button>
-    <form #f="ngForm" (ngSubmit)="onSub(f)" novalidate>
+    <button (click)="create()">Guardar</button> <button (click)="delete()">Borrar</button>
+    <form #f="ngForm" novalidate>
   </form>
   <!--<div *ngFor="let v of data.voluntarios"><p>{{v}}</p> </div>-->
 </div>

@@ -1,0 +1,22 @@
+
+<div mat-dialog-content>
+    <h3>Nuevo usuario</h3>
+    <div class="row">
+        <mat-form-field>
+            <input matInput #usuario maxlength="10" placeholder="Usuario">
+            <!--<mat-hint align="end">{{usuario.value?.length || 0}}/10</mat-hint>-->
+        </mat-form-field>
+    </div>
+    <mat-form-field>
+        <input matInput #clave maxlength="10"  placeholder="Clave">
+        <!--<mat-hint align="end">{{usuario.value?.length || 0}}/10</mat-hint>-->
+    </mat-form-field>
+    
+      <mat-form-field>
+        <mat-select placeholder="Tipo de usuario">
+          <mat-option value="option">admin</mat-option>
+          <mat-option value="option">voluntario</mat-option>
+        </mat-select>
+        <!--<mat-hint align="end">Here's the dropdown arrow ^</mat-hint>-->
+      </mat-form-field>
+  </div>

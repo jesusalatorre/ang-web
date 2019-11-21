@@ -157,6 +157,13 @@ Estilos de Proyecto99
   margin: auto;
 }
 
+.asig-btn{
+  color: white;
+  background-color: green;
+  margin: auto;
+  padding: 0px;
+}
+
 .mat-header-cell {
   text-align: center;
 }

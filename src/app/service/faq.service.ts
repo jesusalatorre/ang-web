@@ -9,6 +9,7 @@ export class FaqService {
   public mkFaq ='/pages/makeFaq';
   public gtFaq ='/pages/getFaq';
   public dlFaq ='/pages/delFaq';
+  public mdFaq ='/pages/modFaq';
 
   constructor(
     private http: HttpClient
@@ -27,8 +28,14 @@ export class FaqService {
   }
 
 
-  delFaq(question){
-    return this.http.post(this.url+this.dlFaq,{"question":question})
+  delFaq(id){
+    console.log("del")
+    return this.http.post(this.url+this.dlFaq,{"id":id})
+  }
+
+
+  modFaq(question,answer,id){
+    return this.http.post(this.url+this.mdFaq,{"id":id,"question":question,"answer":answer})
   }
 
 

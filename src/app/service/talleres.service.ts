@@ -24,6 +24,7 @@ export class TalleresService {
         "voluntario":      data.vol,
         "type":            data.type,
     */
+   console.log("se esta mandadndo",{"title":title,"img":img,"desc":des,"hor":hor,"vol":vol,"type":type})
     return this.http.post(this.url+this.stTalleres,{"title":title,"img":img,"desc":des,"hor":hor,"vol":vol,"type":type})
   }
   
@@ -31,11 +32,12 @@ export class TalleresService {
     return this.http.post(this.url+this.gtTalleres,{"type":type})
   }
 
-  modTalleres(title,image,des,hor,vol){
-    return this.http.post(this.url+this.mdTalleres,{"title":title,"image":image,"desc":des,"horario":hor,"vol":vol})
+  modTalleres(title,image,des,hor,vol,type){
+    return this.http.post(this.url+this.mdTalleres,{"title":title,"img":image,"desc":des,"hor":hor,"vol":vol,"type":type})
   }
   
   delTalleres(title){
+    console.log(title)
     return this.http.post(this.url+this.dlTalleres,{"title":title})
   }
 }

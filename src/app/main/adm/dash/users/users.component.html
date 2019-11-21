@@ -23,16 +23,23 @@
 
       <ng-container matColumnDef="asig">
         <mat-header-cell *matHeaderCellDef>Asignar horas</mat-header-cell>
-        <mat-cell *matCellDef="let users"><input class="hour-input"></mat-cell>
+        <mat-cell *matCellDef="let users; let i = index"><input class="hour-input" [(ngModel)]="horas[i]"></mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="borr">
         <mat-header-cell *matHeaderCellDef>Borrar</mat-header-cell>
-        <mat-cell *matCellDef="let users"><button class="del-btn">Borrar</button></mat-cell>
+        <mat-cell *matCellDef="let users"><button class="del-btn" (click)="delete(users)">Borrar</button></mat-cell>
       </ng-container>
+
+      <ng-container matColumnDef="asigB">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let users; let i = index"><button class="asig-btn" (click)="asignar(users.username,horas[i])">Asiganar Horas</button></mat-cell>
+      </ng-container>
+
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
 
       <mat-row *matRowDef="let row; columns: displayedColumns" (click)="onRowClicked(row)"></mat-row>
+
     </mat-table>
     <div padding *ngIf="!users.length" class="empty-row">No hay registros</div>
   </div>

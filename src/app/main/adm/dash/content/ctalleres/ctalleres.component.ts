@@ -1,7 +1,7 @@
 import { TalleresService } from './../../../../../service/talleres.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ContentTallerModComponent } from './content-taller-mod/content-taller-mod.component';
+import { ContentTallerModComponent, voluntraios } from './content-taller-mod/content-taller-mod.component';
 
 @Component({
   selector: 'app-ctalleres',
@@ -96,12 +96,12 @@ export class CtalleresComponent implements OnInit {
     horario: object;
     voluntarios:object;
   */
-  loadMod(info): void {
+  loadMod(info?): void {
     if(info)
     {
       const dialogRef = this.dialog.open(ContentTallerModComponent, {
         width: '750px',
-        data: {title: info.title, desc: info.desc, horario: info.horario, voluntarios:info.voluntario,id:info._id}
+        data: {title: info.title, desc: info.desc, horario: info.horario, voluntarios:info.voluntario,id:info._id,img:info.image,new:false,type:info.type}
       });
       //after closes updates te list (to see if it is errased)
       dialogRef.afterClosed().subscribe((reply)=>{
@@ -123,9 +123,10 @@ export class CtalleresComponent implements OnInit {
     }
     else
     {
+
       const dialogRef = this.dialog.open(ContentTallerModComponent, {
         width: '750px',
-        data:{title: "", desc: "", horario:  "", voluntarios: ""}
+        data:{title: "", desc: "", horario:{lunes:"",martes:"",miercoles:"",jueves:"",viernes:"",sabado:""}, voluntarios:{uno:"",dos:"",tres:""},new:true}
       });
       //after closes updates te list (to see if it is created)
       dialogRef.afterClosed().subscribe((reply)=>{
@@ -148,3 +149,4 @@ export class CtalleresComponent implements OnInit {
     
   };
 }
+ 

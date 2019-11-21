@@ -8,6 +8,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatTableModule} from '@angular/material/table'; 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule,MatInputModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { TalleresComponent } from './main/talleres/talleres.component';
@@ -25,6 +27,7 @@ import { CHomwComponent } from './main/adm/dash/content/c-homw/c-homw.component'
 import { CtalleresComponent } from './main/adm/dash/content/ctalleres/ctalleres.component';
 import { CContactoComponent } from './main/adm/dash/content/c-contacto/c-contacto.component';
 import { ContentTallerModComponent } from './main/adm/dash/content/ctalleres/content-taller-mod/content-taller-mod.component';
+import { NewUserComponent } from './main/adm/dash/users/new-user/new-user.component';
 
 const routes: Routes = [
   { path: 'home', component: MainComponent },
@@ -59,6 +62,7 @@ const routes: Routes = [
     CtalleresComponent,
     CContactoComponent,
     ContentTallerModComponent,
+    NewUserComponent,
     
   ],
   imports: [
@@ -71,9 +75,12 @@ const routes: Routes = [
     MatTableModule,
     HttpClientModule,
     FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
     RouterModule.forRoot(routes)
   ],
-  entryComponents:[ModComponent,ContentTallerModComponent],
+  entryComponents:[ModComponent,ContentTallerModComponent,NewUserComponent],
   providers: [],
   bootstrap: [AppComponent],
   exports: [RouterModule]

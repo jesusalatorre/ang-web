@@ -1,0 +1,36 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class UsersService {
+  public url = 'https://p99mty.appspot.com';
+  public listUsrs ='/users/list';
+  public createUsrs ='/users/register';
+  public deleteUsrs ='/users/delete';
+  public horasUsrs ='/users/horas';
+
+
+  constructor(
+    private http: HttpClient
+
+  ) { }
+
+  listUsers(){
+    //console.log("url ",)
+    return this.http.post(this.url+this.listUsrs,{});
+  }
+
+  createUsers(data){
+    return this.http.post(this.url+this.createUsrs,{"username":data.username,"password":data.password,"type":data.type});
+  }
+
+  deleteUsers(data){
+    return this.http.post(this.url+this.deleteUsrs,{"username":data.username});
+  }
+
+  addHrs(user,horas){
+    return this.http.post(this.url+this.horasUsrs,{"username":user,"horas":horas});
+  }
+}
